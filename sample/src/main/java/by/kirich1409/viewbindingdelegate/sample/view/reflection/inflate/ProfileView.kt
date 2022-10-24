@@ -6,6 +6,7 @@ import android.content.Context
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import by.kirich1409.viewbindingdelegate.CreateMethod
+import by.kirich1409.viewbindingdelegate.sample.R
 import by.kirich1409.viewbindingdelegate.sample.databinding.ViewProfileBinding
 import by.kirich1409.viewbindingdelegate.viewBinding
 
@@ -18,6 +19,11 @@ class ProfileView @JvmOverloads constructor(
     private val viewBinding: ViewProfileBinding by viewBinding(CreateMethod.INFLATE)
 
     init {
-        addView(viewBinding.root)
+        inflate(context, R.layout.view_profile, this)
+        viewBinding.name.text = "Hello World"
     }
+
+//    init {
+//        addView(viewBinding.root)
+//    }
 }

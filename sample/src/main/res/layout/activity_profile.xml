@@ -13,4 +13,7 @@
         android:layout_height="match_parent"
         tools:layout="@layout/fragment_profile" />
 
+    <by.kirich1409.viewbindingdelegate.sample.view.reflection.inflate.ProfileView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </LinearLayout>
