@@ -16,7 +16,8 @@ class ProfileView @JvmOverloads constructor(
     defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
 
-    private val viewBinding: ViewProfileBinding by viewBinding(CreateMethod.INFLATE)
+    // remove CreateMethod.INFLATE reproduce bug
+    private val viewBinding: ViewProfileBinding by viewBinding()
 
     init {
         inflate(context, R.layout.view_profile, this)
